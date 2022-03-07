@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onFileSelect(event: { target: { files: string | any[]; }; }) {
+  onFileSelect(event) {
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       this.uploadForm.get('profile')?.setValue(file);
