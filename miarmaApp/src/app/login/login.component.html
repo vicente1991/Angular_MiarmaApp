@@ -1,0 +1,29 @@
+
+
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+         <mat-icon>menu</mat-icon>
+       </button>
+       <span>MiarmApp</span>
+       <span class="example-spacer"></span>
+       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+         <mat-icon>favorite</mat-icon>
+       </button>
+       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+     </mat-toolbar>
+   
+   
+   
+     <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Write your email" [(ngModel)]="user.email" name="email">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Write your password" type="password" [(ngModel)]="user.password" name="password">
+      </mat-form-field>
+        <button mat-raised-button color="primary" (click)="doLogin()">Login</button>
+    </form>

@@ -1,0 +1,45 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Write your name" [(ngModel)]="RegisterDto.nombre" name="username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellidos</mat-label>
+        <input matInput placeholder="Write your last name" [(ngModel)]="RegisterDto.apellidos" name="username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nick</mat-label>
+        <input matInput placeholder="Write your nick" [(ngModel)]="RegisterDto.nick" name="username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Write your email" [(ngModel)]="RegisterDto.email" name="email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Fecha Nacimiento</mat-label>
+        <input matInput placeholder="Write your fechaNacimiento" [(ngModel)]="RegisterDto.fechaNacimiento" name="fechaNacimiento">
+    </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Write your password" [(ngModel)]="RegisterDto.password" name="password">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Repit Password</mat-label>
+        <input matInput placeholder="Write your password" [(ngModel)]="RegisterDto.password2" name="password2">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Privacidad</mat-label>
+        <input matInput placeholder="Write your privacity" [(ngModel)]="RegisterDto.visibilidadUsuario" name="privacity">
+      </mat-form-field>
+      <div>
+        <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">      
+          <div>
+            <input type="file" name="profile" (change)="onFileSelect($event)" />
+          </div>
+          <div>
+            <button type="submit">Upload</button>
+          </div>
+        </form>
+      </div>
+      <button mat-raised-button color="primary" (click)="doRegister()">Register</button>
+  </form>
