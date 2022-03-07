@@ -9,12 +9,14 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialImportsModule } from './modules/material-imports-module';
+import { SideMenuComponent } from './share/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SideMenuComponent
   ],
   imports: [
     FormsModule,
