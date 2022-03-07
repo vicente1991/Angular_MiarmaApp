@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { AuthLoginResponse } from '../login/user/interfaces/login.interface';
+import { AuthLoginResponse } from '../model/interfaces/login.interface';
 import { User } from '../login/user/user';
 import { AuthRegisterDto } from '../register/dto/auth.dto';
 import { AuthRegisterResponse } from '../register/dto/auth.interface';
