@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthRegisterDto } from './dto/auth.dto';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../service/auth.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { RestService } from '../service/rest-service';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-register',
@@ -17,6 +18,7 @@ export class RegisterComponent implements OnInit {
   public previsualizacion!: string;
   public loading!: boolean
   public archivos: any =[];
+  
   RegisterDto = new AuthRegisterDto();
 
   constructor(private sanitizer: DomSanitizer,private rest: RestService,private formBuilder: FormBuilder, private http: HttpClient,private authService: AuthService) { }
@@ -41,9 +43,6 @@ export class RegisterComponent implements OnInit {
 
     })
     this.archivos.push(archivoCapturado)
-    // 
-    // console.log(event.target.files);
-
   }
 
   
@@ -90,8 +89,7 @@ export class RegisterComponent implements OnInit {
       this.archivos.forEach((archivo: any) => {
         formularioDeDatos.append('files', archivo)
       })
-      // formularioDeDatos.append('_id', 'MY_ID_123')
-      this.rest.post(`http://localhost:8080/upload`, formularioDeDatos)
+      this.rest.post('http://localhost:8080/upload', formularioDeDatos)
         .subscribe(res => {
           this.loading = false;
           console.log('Respuesta del servidor', res);

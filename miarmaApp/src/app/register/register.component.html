@@ -27,11 +27,17 @@
         <mat-label>Repit Password</mat-label>
         <input matInput placeholder="Write your password" [(ngModel)]="RegisterDto.password2" name="password2">
       </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Privacidad</mat-label>
-        <input matInput placeholder="Write your privacity" [(ngModel)]="RegisterDto.visibilidadUsuario" name="privacity">
-      </mat-form-field>
-      <div>  
+      <br>
+      <br>
+      <mat-card-content>
+        <h3>Privacidad:</h3>
+        <section class="example-full-width caja">
+        <span style="margin-right: 10px;">Privado</span>
+        <mat-slide-toggle style="margin-right: 10px;" [checked]="false" [(ngModel)]="RegisterDto.visibilidadUsuario" name="privacidad"></mat-slide-toggle>
+        <span style="margin-right: 10px;">Publico</span>
+        </section>
+      </mat-card-content>
+      <div class="archivo">  
         <div>
           <input type="file" (change)="capturarFile($event)">
         </div>
@@ -43,3 +49,4 @@
         </div>
       </div>
   </form>
+

@@ -5,3 +5,11 @@ p{
 .boton{
     margin-left: 10%;
 }
+.archivo{
+    margin-top: 40px;
+}
+.caja{
+    display:flex ;
+    flex-direction: row;
+    justify-content: start;
+}
