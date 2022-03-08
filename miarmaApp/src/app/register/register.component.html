@@ -31,15 +31,15 @@
         <mat-label>Privacidad</mat-label>
         <input matInput placeholder="Write your privacity" [(ngModel)]="RegisterDto.visibilidadUsuario" name="privacity">
       </mat-form-field>
-      <div>
-        <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">      
-          <div>
-            <input type="file" name="profile" (change)="onFileSelect($event)" />
-          </div>
-          <div>
-            <button type="submit">Upload</button>
-          </div>
-        </form>
+      <div>  
+        <div>
+          <input type="file" (change)="capturarFile($event)">
+        </div>
+        <div>
+          <button type="button" (click)="subirArchivo()">Subir archivo</button>
+        </div>
+        <div *ngIf="previsualizacion">
+          <img width="100px" [src]="previsualizacion" alt="">
+        </div>
       </div>
-      <button mat-raised-button color="primary" (click)="doRegister()">Register</button>
   </form>

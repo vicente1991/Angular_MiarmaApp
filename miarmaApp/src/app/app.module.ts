@@ -16,7 +16,7 @@ import { SideMenuComponent } from './share/side-menu/side-menu.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    SideMenuComponent
+    SideMenuComponent,
   ],
   imports: [
     FormsModule,
