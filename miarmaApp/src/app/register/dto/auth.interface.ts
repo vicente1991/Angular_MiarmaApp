@@ -1,11 +1,11 @@
+
 export interface AuthRegisterResponse {
+    id:                 string;
     nombre:             string;
     apellidos:          string;
     nick:               string;
-    email:              string;
     fechaNacimiento:    string;
-    visibilidadUsuario: boolean;
+    email:              string;
     avatar:             string;
-    password:           string;
-    password2:          string;
+    visibilidadUsuario: string;
 }

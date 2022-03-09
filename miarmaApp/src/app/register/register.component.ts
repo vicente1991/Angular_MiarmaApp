@@ -31,7 +31,8 @@ export class RegisterComponent implements OnInit {
 
   doRegister(){
     this.authService.register(this.RegisterDto).subscribe(RegisterResult => {
-      alert(`Te has registrado correctamente`)
+      alert(`Te has logueado y tu id es ${RegisterResult.id}`)
+      localStorage.setItem('id',RegisterResult.id)
     });
   }
 
